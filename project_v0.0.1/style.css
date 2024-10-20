@@ -1,0 +1,24 @@
+body{ 
+}
+.title {
+    text-align: center;
+    font-family:'bangers' ;
+}
+.bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+li{
+    font-size: 20px;
+    font-family: "Bangers", system-ui;
+    display: inline;
+    padding: 25px 
+}  
