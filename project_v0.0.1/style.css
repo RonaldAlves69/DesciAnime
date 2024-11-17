@@ -1,108 +1,137 @@
-body { 
-    background-color: rgb(0, 0, 0); 
+/* Corpo */
+body {
+    background-color: #121212;  
+    color: #E0E0E0;  
+    font-family: 'Montserrat', sans-serif; 
+    margin: 0;
+    padding: 0;
 }
 
-
-
+/* Título principal com animação de cor */
 .title {
     text-align: center;
-    font-family: 'Bangers'; 
-    color: aliceblue;
-    font-size: 39px;
- 
+    font-family: 'Bangers', cursive; 
+    color: #E0E0E0;  
+    font-size: 42px;
+    animation: colorChange 3s infinite alternate;  
+    margin-top: 20px;
 }
 
 @keyframes colorChange {
-    0% {
-        color: aliceblue;
-    }
-    50% {
-        color: #6EC9F5; 
-    }
-    100% {
-        color: aliceblue; 
-    }
+    0%, 100% { color: #E0E0E0; }
+    50% { color: #6EC9F5; }
 }
 
-.title {
-    animation: colorChange 2s infinite; 
+/* Seção de games */
+.games-section {
+    display: flex;  
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 20px; 
 }
 
-
-.games-section h2 {
-    text-align: left;
-    padding: 20px;
-    font-size: 19px;
+/* Cada item de jogo */
+.gameitem {
+    flex: 1 1 calc(33.333% - 20px); 
+    box-sizing: border-box; 
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px; 
+    transition: transform 0.3s ease;  
+    overflow: hidden;  
 }
 
-
-
-h2 {
-    color: #6EC9F5;
-    text-align: center; 
-    padding: 0px;
-    margin: 0;
-    font-size: 14px
+/* Efeito ao passar o mouse sobre o item de jogo */
+.gameitem:hover {
+    transform: scale(1.03);
+    background-color: #333;
 }
 
-.bangers-regular {
-    font-family: "Bangers", system-ui;
-    font-weight: 400;
-    font-style: normal;
+/* Título dentro do item de jogo */
+.gameitem h3 {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 10px 0;
 }
 
+/* Imagens dos jogos */
+.gameitem img {
+    width: 100%; 
+    max-width: 150px; 
+    height: auto;  
+    border-radius: 8px;  
+    object-fit: cover; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);  
+    margin-bottom: 10px;  
+}
+
+/* Descrição do jogo  começar oculta */
+.gameitem p {
+    color: #ddd;  
+    font-size: 14px;
+    line-height: 1.5; 
+    display: none;  
+    text-align: center;
+}
+
+/* Mostrar a descrição quando o botão for clicado */
+.gameitem .description.show {
+    display: block; 
+}
+
+/* Navegação */
 .nav-menu {
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+    padding: 10px;
     text-align: center;
-    background-color: #6E9EF5;
-    border-radius: 20px;
+    background-color: #252525;
+    border-radius: 25px;
+    margin: 20px auto;
+    max-width: 600px;
 }
-
-/*ANIMATION FOR LI IN ZOOM*/
-@keyframes zoomLi {
-    0% {
-        transform: scale(1); 
-    }
-    100% {
-        transform: scale(1.1); 
-    }
-}
-
 
 .nav-menu li {
-    display: inline-block; 
+    display: inline-block;
     padding: 10px 20px;
-    transition: transform 0.3s ease; 
+    font-size: 18px;
+    font-family: 'Bangers', cursive;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-
 .nav-menu li:hover {
-    animation: zoomLi 0.5s forwards; /* Animação de zoom ao passar o mouse */
+    transform: scale(1.1);
+    color: #FFD700;
 }
 
 .nav-menu li a {
-    color: yellow;
+    color: #FFF;
+    text-decoration: none;
 }
 
 .nav-menu li a:hover {
-    color: lightblue; 
+    color: #6EC9F5;
 }
 
-li {
-    font-size: 20px;
-    font-family: "Bangers", system-ui;
-    display: inline;
-    padding: 25px;
+/* Botão estilo */
+.toggle-description {
+    background-color: #910a96;  
+    color: white;  
+    border: none;  
+    padding: 10px 20px;  
+    border-radius: 8px; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 14px; 
+    cursor: pointer;  
+    transition: background-color 0.3s ease, transform 0.2s ease;  
 }
 
-
-.games-section {
-    font-family: 'crossorigin'
+.toggle-description:hover {
+    background-color: #4e074b;  
+    transform: scale(1.05);  
 }
 
-
-.gameitem h3 {
-    color: azure;
+.toggle-description:active {
+    background-color: #690669;  
+    transform: scale(0.95);  
 }

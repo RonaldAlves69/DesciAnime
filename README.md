@@ -7,3 +7,7 @@ i mee too changed name for page Descigames??? your creativity very good seriousl
 
 Wendel - 21/10/2024
 
+
+i put in script for description in games with javascript, and i add more things style, button, border and animation for text
+
+Wendel - 17/11/2024
